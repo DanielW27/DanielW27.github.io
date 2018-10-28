@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+  font-family: 'Roboto';
+}
+
+header {
+  background-color: #CCC;
+  display: flex;
+  align-items: center;
+
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  margin: auto;
+}
