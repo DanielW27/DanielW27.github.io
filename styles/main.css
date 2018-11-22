@@ -66,6 +66,18 @@ header {
   align-items: center;
 
 }
+#introlink{
+  padding-bottom: 1px;
+  border-bottom: 2px solid #000;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  color: #000;
+  text-decoration: none;
+}
+#introlink:hover {
+  padding-bottom: 4px;
+  border-bottom-color: transparent;
+}
 header ul li{
   padding: 1rem;
 }

@@ -2,42 +2,71 @@
 <html>
   <head>
     <title>Daniel Williamson</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <header>
-      <ul class="links">
-        <li><a href="assests/resume.pdf">Resume</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">My Work</a></li>
-        <li><button class="btn sec">Contact</button></li>
-      </ul>
-    </header>
-    <div class="main-container">
-      <div id="about" class="section">
-        <h1>Hi, my name's Daniel.</h1>
-        <h2>I'm a current student and web development enthusiast.</h2>
-      </div>
-      <div id="projects" class="section">
-        <p>Here's some of my favorite work:</p>
-        <ul>
-          <li><a href="#0">VueJS</a></li>
-          <li><a href="#0">AngularJS</a></li>
-          <li><a href="#0">React</a></li>
-          <li><a href="#0">Other</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Daniel Williamson</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="assests/resume.pdf">Resume</a>
+          </li>
         </ul>
       </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-2">Hi, my name's Daniel.</h1>
+        <p class="lead">I'm a current <a id="introlink" href="https://www.cise.ufl.edu">student</a> and web development enthusiast.</p>
+      </div>
     </div>
-    <footer>
-      <h3>Contact me</h3>
-      <a href="mailto:danielrwilliamson27@gmail.com">danielrwilliamson27@gmail.com</a>
-      <ul>
-        <li>Github</li>
-        <li>Linkedin</li>
-        <li>Twitter</li>
-      </ul>
-    </footer>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">A little bit about me</h1>
+      </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Here's some of my favorite work</h1>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="#">Contact me</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><strong>danielw27@ufl.edu</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Github</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Linkedin</a>
+          </li>
+    </nav>
 
   </body>
 </html>
