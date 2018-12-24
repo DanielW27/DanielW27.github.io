@@ -1,73 +1,364 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Daniel Williamson</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Dan.</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">My Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="assests/resume.pdf">Resume</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <title>Daniel Williamson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-2">Hi, my name's Daniel.</h1>
-        <p class="lead">I'm a current <a id="introlink" href="https://www.cise.ufl.edu" target="blank">student</a> and web development enthusiast.</p>
-      </div>
-    </div>
+  <!-- HOSTED -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800' rel='stylesheet' type='text/css'>
+  <link href="fonts/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" />
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">A little bit about me</h1>
-      </div>
-    </div>
+  <!-- LOCAL -->
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/animation.css">
+  <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Here's some of my favorite work</h1>
-      </div>
-    </div>
+  <!-- HOSTED -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <a class="navbar-brand" href="#">Contact me</a>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><strong>danielw27@ufl.edu</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/DanielW27" target="blank">Github</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/DWDesigned" target="blank">Twitter</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/danielrwilliamson/" target="blank">Linkedin</a>
-          </li>
-    </nav>
+  <!-- LOCAL -->
+  <script src="scripts/pt.min.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/animation.js"></script>
 
-  </body>
+
+</head>
+<body>
+  <!-- <div id="animations-container">
+      <h1 class="display-1"><span></span></h1>
+  </div> -->
+  <div class="after-anim">
+      <div class="overflow-wrap">
+
+          <!-- MODAL FOR PORTFOLIO -->
+            <div class="modal-wrap flex">
+              <div class="mask"></div>
+              <div class="modal" id="modal">
+                <div class="carousel-wrap">
+                  <div class="window">
+                    <div id="carousel">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    </div>
+                    <i class="mdi mdi-chevron-left" id="prev"></i>
+                    <i class="mdi mdi-chevron-right" id="next"></i>
+                  </div>
+          
+                </div>
+                <div class="info-box">
+                  <div class="title"></div>
+                  <div class="tag"></div>
+                  <div class="detail"></div>
+                  <a href="#" target="_blank"><div class="button"><i class="mdi mdi-open-in-new"></i>VIEW SITE</div></a>
+                </div>
+                <i class="close mdi mdi-close"></i>
+              </div>
+            </div>
+          
+          <!-- HOME -->
+            <section id="home" class="flex height-fix">
+              <div id="pt" class="canvas"></div>
+              <div class="flex">
+          
+                <div class="text">
+                  Hello, I'm <span class="highlight">Daniel Williamson</span>.
+                  <br>
+                  I'm a current student and web enthusiast.
+                </div>
+          
+                <div class="button page-link" dest="about">View my work <i class="mdi mdi-arrow-right"></i></div>
+          
+                <nav class="flex">
+                  <div class="link-wrap">
+                    <div class="active page-link" dest="home">home</div>
+                    <div class="page-link" dest="about">about</div>
+                    <div class="page-link" dest="portfolio">portfolio</div>
+                    <div class="page-link" dest="contact">contact</div>
+                  </div>
+                  <i class="mdi mdi-menu"></i>
+                </nav>
+              </div>
+          
+            </section>
+          
+          <!-- ABOUT -->
+            <section id="about">
+              <div class="container flex">
+          
+                <div class="header waypoint" data-animation="slide-in-left">ABOUT</div>
+                <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+          
+                <div class="flex row label-wrap">
+                  <div class="flex row-gt-sm">
+                  <div class="flex bullet-wrap ">
+                    <div class="hex-wrap waypoint" data-animation="flip-in-x">
+                      <div class="hexagon">
+                        <i class="mdi mdi-wrench"></i>
+                      </div>
+                    </div>
+                    <div class="waypoint" data-animation="fade-in">
+                      <div class="label bold">Hands On</div>
+                      <div>I've been building ever since I got my first toolbox. Now I get to build software!</div>
+                    </div>
+                  </div>
+          
+                  <div class="flex bullet-wrap " >
+                    <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay=".2s">
+                      <div class="hexagon">
+                        <i class="mdi mdi-basecamp"></i>
+                      </div>
+                    </div>
+                    <div class="waypoint" data-animation="fade-in" data-delay=".2s">
+                      <div class="label bold">Adventurous</div>
+                      <div>I love hiking and camping. Luckily <a class="highlight" href="http://recsports.ufl.edu/outdoors-adventure/core">CORE</a> has given me the chance to explore in college!</div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="flex row-gt-sm">
+                    <div class="flex bullet-wrap " >
+                      <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay=".4s">
+                        <div class="hexagon">
+                          <i class="mdi mdi-lightbulb-outline"></i>
+                        </div>
+                      </div>
+                      <div class="waypoint" data-animation="fade-in" data-delay=".4s">
+                        <div class="label bold">Innovative</div>
+                        <div>I like to think outside of the box and find new solutions to old problems.</div>
+                      </div>
+                    </div>
+          
+                    <div class="flex bullet-wrap " >
+                      <div class="hex-wrap waypoint" data-animation="flip-in-x" data-delay=".6s">
+                        <div class="hexagon">
+                          <i class="mdi mdi-headphones"></i>
+                        </div>
+                      </div>
+                      <div class="waypoint" data-animation="fade-in" data-delay=".6s">
+                        <div class="label bold">Creative</div>
+                        <div>Listening to and creating music is another creative outlet of mine! I'm a huge bass junkie.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="skills-wrapper flex row-gt-sm">
+                  <div class="flex flex-50-gt-sm waypoint" data-animation="slide-in-left">
+                    <img src="img/me.png" class="me">
+                    <!-- <div><img class="up-arrow" src="img/up-arrow.png"></div> -->
+                    <div class="label bold">Take a second to get to know me.</div>
+                    <div>
+                      I'm a current student at <a class="highlight" href="https://www.cise.ufl.edu/" target="_blank">The Univesity of Florida</a>.
+                      <br>
+                      I have a passion for working on all types of software, from Web Development to Programming Prostheses. 
+                      <br>
+                      <span class="page-link highlight" dest="contact">Let's build something, together.</span>
+                    </div>
+                  </div>
+          
+                  <div class="flex flex-50-gt-sm waypoint bars-wrap"  data-animation="slide-in-right">
+          
+                    
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:85%">
+                        <div class="tag bold flex">JavaScript</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:80%">
+                        <div class="tag bold flex">HTML</div>
+                      </div>
+                    </div>  
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:75%">
+                        <div class="tag bold flex">CSS</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:75%">
+                        <div class="tag bold flex">Angular</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:70%">
+                        <div class="tag bold flex">React</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:65%">
+                        <div class="tag bold flex">Node.js</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:80%">
+                        <div class="tag bold flex">Java</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:75%">
+                        <div class="tag bold flex">C++</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:65%">
+                        <div class="tag bold flex">Python</div>
+                      </div>
+                    </div>
+          
+                    <div class="bar flex">
+                      <div class="bar fill" style="width:55%">
+                        <div class="tag bold flex">AWS</div>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </div>
+            </section>
+          
+          <!-- PORTFOLIO -->
+            <section class="flex" id="portfolio">
+          
+              <div class="header waypoint" data-animation="slide-in-right">PROJECTS</div>
+              <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".3s"></div>
+          
+              <div class="filter-wrap waypoint" data-animation="fade-in">
+                <div class="flex row">
+                  <div class="filter" data-filter="all">ALL</div>
+                  <div class="filter" data-filter=".node">NODE.JS</div>
+                  <div class="filter" data-filter=".rails">REACT</div>
+                  <div class="filter" data-filter=".js">ANGULAR</div>
+                </div>
+                <div class="float-bar">
+                  <div class="flex row">
+                    <div class="filter" data-filter="all">ALL</div>
+                    <div class="filter" data-filter=".node">NODE.JS</div>
+                    <div class="filter" data-filter=".rails">REACT</div>
+                    <div class="filter" data-filter=".js">ANGULAR</div>
+                  </div>
+                </div>
+              </div>
+          
+              <div id="gallery" class="container flex row wrap waypoint">
+                <div class="mix js" data-my-order="1">
+                  <div>
+                    <div class="card"></div>
+                    <div class="text">
+                      <div class="bold">Crowdy</div>
+                      <span class="highlight">Angular 7 and Firebase</span>
+                    </div>
+                    <div class="button" id="roambi">LEARN MORE</div>
+                  </div>
+                </div>
+          
+                <div class="mix node" data-my-order="1">
+                  <div>
+                    <div class="card"></div>
+                    <div class="text">
+                      <div class="bold">todoList</div>
+                      <span class="highlight">NodeJS and MongoDB</span>
+                    </div>
+                    <div class="button" id="walker">LEARN MORE</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          
+          <!-- BLOG -->
+            <section id="blog" class="hide">
+            </section>
+          
+            <!-- CONTACT -->
+            <section id="contact">
+              
+              <div class="container flex">
+                <div class="header waypoint" data-animation="slide-in-left">CONTACT</div>
+                <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
+                <div class="highlight waypoint" data-animation="slide-in-right" data-delay=".4s">Have a question or want to work together?</div>
+                <div class=" waypoint" data-animation="slide-in-left" data-delay=".4s">Feel free to connect or reach out to me on any of the platforms below.</div>
+              </div>
+            </section>
+          
+            <footer>
+              <i class="mdi mdi-chevron-double-up page-link" dest="home"></i>
+              <br>
+              <div class="icon-wrap flex row">
+                <a href="https://www.linkedin.com/in/danielrwilliamson/">
+                  <div class="flex icon" id="icon-2">
+                    <i class="mdi mdi-linkedin"></i>
+                  </div>
+                </a>
+                <a href="mailto:danielw27@ufl.edu">
+                  <div class="flex icon" id="icon-3">
+                    <i class="mdi mdi-email"></i>
+                  </div>
+                </a>
+                <a href="https://twitter.com/uf_dan">
+                  <div class="flex icon" id="icon-4">
+                    <i class="mdi mdi-twitter"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="info-box">
+                <br>
+                <div class="footnote">DANIEL WILLIAMSON <span class="highlight">&copy;2018</span></div>
+                <div class="footnote"><a href="https://github.com/DanielW27/">https://github.com/DanielW27/</a> </div>
+              </div>
+            </footer>
+          
+          </div>
+          
+  </div>
+
+<div id="preload">
+   <img src="img/me.png"/>
+   <img src="img/filler.jpg"/>
+   <img src="img/thumb-1.jpg"/>
+   <img src="img/thumb-2.jpg"/>
+   <img src="img/thumb-3.jpg"/>
+   <img src="img/thumb-4.jpg"/>
+   <img src="img/thumb-5.jpg"/>
+   <img src="img/thumb-6.jpg"/>
+   <img src="img/blog-1.jpg"/>
+   <img src="img/blog-2.jpg"/>
+   <img src="img/blog-3.jpg"/>
+   <img src="img/blog-4.jpg"/>
+   <img src="img/slides/mystand-0.jpg"/>
+   <img src="img/slides/mystand-1.jpg"/>
+   <img src="img/slides/mystand-2.jpg"/>
+   <img src="img/slides/never-0.jpg"/>
+   <img src="img/slides/never-1.jpg"/>
+   <img src="img/slides/never-2.jpg"/>
+   <img src="img/slides/powur-0.jpg"/>
+   <img src="img/slides/powur-1.jpg"/>
+   <img src="img/slides/powur-2.jpg"/>
+   <img src="img/slides/roambi-0.jpg"/>
+   <img src="img/slides/roambi-1.jpg"/>
+   <img src="img/slides/roambi-2.jpg"/>
+   <img src="img/slides/themall-0.jpg"/>
+   <img src="img/slides/themall-1.jpg"/>
+   <img src="img/slides/themall-2.jpg"/>
+   <img src="img/slides/walker-0.jpg"/>
+   <img src="img/slides/walker-1.jpg"/>
+   <img src="img/slides/walker-2.jpg"/>
+</div>
+
+</body>
 </html>
+
+<script src="scripts/canvas.js"></script>
+<!-- <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+      <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+    </svg> -->

@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+#animations-container{
+  font-family: 'Roboto' !important;
+  font-size: 3rem;
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #060606;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: 1s ease-out 7s animCloseUp;
+}
+
+#animations-container h1 {
+  color: white;
+}
+#animations-container span {
+  border-right: .05em solid;
+  animation: caret 1.5s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes animCloseUp {
+  .01% {
+    background: white;
+  }
+  100% {
+    transform: scaleY(0);
+    background: white;
+  }
+}
