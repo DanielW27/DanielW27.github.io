@@ -9,16 +9,16 @@ $(document).ready(function(){
       link: 'https://github.com/ekuses/Group5Final'
     },
     walker: {
-      title: 'todoList',
-      tag: 'DATABASE DRIVEN TODO LIST.',
-      detail: 'todoList is a NodeJS/ExpressJS and MongoDB application. jQuery is used on the frontend and consumes the RESTful API that the backend produces to create a todo list that can add, delete, and mark as completed.',
-      link: 'https://github.com/DanielW27/simple-todo-list'
+      title: 'Machine Intelligence Lab',
+      tag: 'AUTONOMOUS UNDERWATER VEHICLE.',
+      detail: 'My work as an undergraduate researcher at the University of Florida has allowed me to work on the development of an Autonomous Underwater Vehicle (AUV). The design of the robot is developed with modularity and fault-tolerance in mind.',
+      link: 'http://subjugator.org'
     },
     powur: {
-      title: '',
-      tag: '',
-      detail: '',
-      link: ''
+      title: 'National Atmospheric Release Advisory Committee',
+      tag: 'Software Engineering Internship',
+      detail: 'During May - August 2019 I worked as a computation intern for Lawrence Livermore National Laboratory. I learned valuable lessons in communicating within a multidisciplinary team, code reviews, and independent problem solving',
+      link: 'https://narac.llnl.gov/'
     },
     mystand: {
       title: '',
