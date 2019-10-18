@@ -96,11 +96,11 @@ $(function() {
     $('.blog-wrap').removeClass('fade');
   });
 
-  posFilterBar($('.filter').first());
+  // posFilterBar($('.filter').first());
 
-  $('.filter').click(function(){
-    posFilterBar(this);
-  });
+  // $('.filter').click(function(){
+  //   posFilterBar(this);
+  // });
 
   function posFilterBar(elem) {
     var origin = $(elem).parent().offset().left;
