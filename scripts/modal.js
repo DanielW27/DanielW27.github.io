@@ -21,9 +21,10 @@ $(document).ready(function(){
       link: 'https://narac.llnl.gov/'
     },
     mystand: {
-      title: '',
-      tag: '',
-      detail: '',
+      title: 'Machine Intelligence Lab',
+      tag: 'Indy Autonomous Challenge',
+      detail: 'Given a bare-bones Dallara IL-15 racecar, my research team at the University of Florida modeled simulations, and developed hardware and software to compete against 37 other Universities across 11 countries.',
+      link: 'https://www.indyautonomouschallenge.com/'
     },
     never: {
       title: '',
