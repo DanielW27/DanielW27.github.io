@@ -2,34 +2,35 @@ $(document).ready(function(){
 
   // MODAL
   var modalText = {
-    roambi: {
+    crowdy: {
       title: 'Crowdy',
       tag: 'CROWD SOURCED MOVIE STATS.',
       detail: 'Crowdy offers crowd sourced statistics on how busy local movie theaters are. It utilizes a 3rd part API to fetch moive theaters and times as well as uses Firebase to authenticate and keep track of how busy the theaters are.',
       link: 'https://github.com/ekuses/Group5Final'
     },
-    walker: {
+    mil_auv: {
       title: 'Machine Intelligence Lab',
       tag: 'AUTONOMOUS UNDERWATER VEHICLE.',
       detail: 'My work as an undergraduate researcher at the University of Florida has allowed me to work on the development of an Autonomous Underwater Vehicle (AUV). The design of the robot is developed with modularity and fault-tolerance in mind.',
       link: 'http://subjugator.org'
     },
-    powur: {
+    narac: {
       title: 'National Atmospheric Release Advisory Committee',
       tag: 'Software Engineering Internship',
       detail: 'During May - August 2019 I worked as a computation intern for Lawrence Livermore National Laboratory. I learned valuable lessons in communicating within a multidisciplinary team, code reviews, and independent problem solving',
       link: 'https://narac.llnl.gov/'
     },
-    mystand: {
+    mil_av: {
       title: 'Machine Intelligence Lab',
       tag: 'Indy Autonomous Challenge',
       detail: 'Given a bare-bones Dallara IL-15 racecar, my research team at the University of Florida modeled simulations, and developed hardware and software to compete against 37 other Universities across 11 countries.',
       link: 'https://www.indyautonomouschallenge.com/'
     },
-    never: {
-      title: '',
-      tag: '.',
-      detail: '',
+    rwhp: {
+      title: 'Rural Womens Health Project',
+      tag: 'Family Separation Florida',
+      detail: 'In colloboration with Family Separation in the Sunshine State I created a set of social media slides to help educate and organize our community',
+      link: "https://famsepfl.org/"
     },
     themall: {
       title: '',
