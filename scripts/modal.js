@@ -26,7 +26,7 @@ $(document).ready(function(){
       detail: 'Given a bare-bones Dallara IL-15 racecar, my research team at the University of Florida modeled simulations, and developed hardware and software to compete against 37 other Universities across 11 countries.',
       link: 'https://www.indyautonomouschallenge.com/'
     },
-    never:{
+    never: {
       title: 'Rural Womens Health Project',
       tag: 'Family Separation Florida',
       detail: 'In colloboration with Family Separation in the Sunshine State I created a set of social media slides to help educate and organize our community',
