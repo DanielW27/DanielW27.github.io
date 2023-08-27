@@ -33,9 +33,9 @@ $(document).ready(function(){
       link: "https://famsepfl.org/"
     },
     themall: {
-      title: '',
-      tag: '',
-      detail: '',
+      title: 'Cyber Risk and Payment Exchange',
+      tag: 'Capital One',
+      detail: 'Got my bachelors and went straight to work!',
     }
   };
 
